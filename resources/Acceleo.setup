@@ -68,6 +68,7 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.GitLearning"
+      location="masters-info-nantes/GitLearning.git"
       remoteURI="masters-info-nantes/GitLearning.git">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
