@@ -96,7 +96,14 @@
       xsi:type="projects:ProjectsImportTask"
       id="fr.univnantes.project.import">
     <sourceLocator
-        rootFolder="${git.clone.location}/"/>
+        rootFolder="${git.clone.location}/resources/fr.univnantes.alma.resources"/>
+    <description></description>
+  </setupTask>
+  <setupTask
+      xsi:type="projects:ProjectsImportTask"
+      id="fr.univnantes.project.import">
+    <sourceLocator
+        rootFolder="${git.clone.location}/resources/fr.univnantes.alma.oomph"/>
     <description></description>
   </setupTask>
   <stream name="master"
