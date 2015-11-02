@@ -86,6 +86,9 @@
             xsi:type="predicates:NamePredicate"
             pattern="fr.univnantes.alma.oomph"/>
         <operand
+            xsi:type="predicates:NamePredicate"
+            pattern="fr.univnantes.alma.resources"/>
+        <operand
             xsi:type="predicates:RepositoryPredicate"
             project="GitLearning"/>
       </predicate>
