@@ -41,6 +41,8 @@
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup.p2:P2Task">
+      <requirement
+        name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
     <requirement
         name="org.eclipse.oomph.setup.projects"/>
     <requirement
@@ -53,6 +55,8 @@
         url="http://eclipse-cs.sourceforge.net/update/"/>
     <repository
         url="http://download.eclipse.org/releases/mars"/>
+<repository
+        url="http://findbugs.cs.umd.edu/eclipse"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask
