@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ALMA M2 2015</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>ALMA M2 2015 Project</h1>
+      <p>
+        Start the project with the following tasks:
+      </p>
+      <ul>
+        <li>Create a Github account or use an existing account but with your real name setup</li>
+        <li>One member of your team, your team leader, will then create a Github organization with a name or reuse an existing organization</li>
+        <li>Add the accounts of all the members of your team to the organization as members along with my account (sbegaudeau)</li>
+        <li>The team leader will create a repository named in the organisation (not in her/his profile). Create the repository with a README.md file inside. This repository will act as the main repository. All the other members should fork this repository in their own Github profile and clone this fork</li>
+        <li>One member of the team will create an issue in the main repository with the label "project management" (previously created by the team leader) to request the edition of the README.md file describing the project (only a couple of lines)</li>
+        <li>One of the member of the team will edit the file named README.md at the root of the repository and she/he will push it to her/his clone of the main repository. Then using a pull request, she/he will submit a review to the main repository</li>
+        <li>The member of the team who has created the issue will review the pull request and she/he will request an improvement to the pull request to add the copyright of the project. After having an updated version of the pull request, if it is valid, the pull request will be accepted</li>
+        <li>Repeat for the files LICENSE.md and CONTRIBUTE.md by changing the members of the team involved in creating the issue and creating the commit. Those files should respectively contain the license of the project (EPL v1.0) and a small contribution guide</li>
+      </ul>
+      <p>
+        When you have to realize one of the following task, make sure to open an issue using, as a title, a user story describing the task. Then, when you will write your commit message do not forget to reference the proper issue using something like "Bug #1".
+      </p>
+      <ul>
+        <li>You will create a regular Eclipse project named fr.univnantes.alma.oomph in a folder named resources of your Git repository.</li>
+        <li>Then, test the <a href="https://git.eclipse.org/c/acceleo/org.eclipse.acceleo.git/tree/releng/org.eclipse.acceleo.releng">setup file</a> of the project Acceleo by downloading it, you will create a setup file named like your organisation in this project after.</li>
+        <li>To test the setup file of Acceleo use the <a href="https://www.eclipse.org/downloads/">Eclipse Installer</a> (Oomph). Have fun configuring the proxy of the university (in the advanced options). USE ECLIPSE MARS TO EDIT THE SETUP MODEL! To install an Acceleo development environment, launch the Eclipse Installer (Oomph), select a version of Eclipse, click next and drag and drop the Acceleo setup file. Double click this setup file in the interface and continue the installation.</li>
+        <li>Create a new setup file in your project. Your setup file should let a contributor create an Eclipse instance with your code checked out, the project fr.univnantes.alma.oomph imported in the workspace in a working set named Resources</li>
+        <li>Your setup file should only import your code properly, it should not configure anymore tools (you may have to remove things from the Acceleo setup file to add them back later on in additionals commit, it's normal)</li>
+        <li>This setup file will be improved during the rest of the lesson.</li>
+      </ul>
+      <p>Static analysis</p>
+      <ul>
+        <li>You will need to create a new issue to update the Oomph setup model to include Checkstyle</li>
+        <li>You will also need to create a project named fr.univnantes.alma.resources in the resources folder with a Checkstyle configuration file inside (use the <a href="https://git.eclipse.org/c/acceleo/org.eclipse.acceleo.git/tree/features/org.eclipse.acceleo-feature/codestyle">same</a> as the Acceleo project)</li>
+        <li>This new project should also be imported in the Resources working set by your setup model</li>
+        <li>Of course, another member of your team should include Findbugs in your setup file.</li>
+      </ul>
+      <p>Target Platform</p>
+      <ul>
+        <li>Install the <a href="https://github.com/mbarbero/fr.obeo.releng.targetplatform">target platform DSL</a> in the setup file</li>
+        <li>Create a target platform file with the same content as <a href="https://github.com/sbegaudeau/alma-m2-2015/blob/gh-pages/fr.univnantes.alma.target/mars.tpd">mine</a> and generate the target platform file</li>
+        <li>Update the setup file to reference the target platform file (Ctrl+R)</li>
+        <li>Create a folder named bundles with a copy of <a href="https://github.com/sbegaudeau/alma-m2-2015/tree/gh-pages/fr.univnantes.alma.server">my web server</a> inside</li>
+        <li>Test your web server using the URL http://localhost:8080/api.</li>
+        <li>You have now a component based server running on top of OSGi against a platform specified using a target platform</li>
+      </ul>
+      <p>Build</p>
+      <ul>
+        <li>Copy all the other projects from my github repository into your repository to have a fully working build.</li>
+        <li>Try the build using the command mvn clean verify in the "releng" project.</li>
+        <li>Setup the build of your repository on Travis CI</li>
+        <li>Make sure that your build can publish the artifacts of your release on a Github release in your project.</li>
+        <li>Create a small webpage for your project on Github (just a small almost empty html will do the job)</li>
+      </ul>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
