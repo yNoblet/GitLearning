@@ -41,28 +41,32 @@
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup.p2:P2Task">
-      <requirement
+    <requirement
         name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
+    <repository
+        url="http://findbugs.cs.umd.edu/eclipse"/>
     <requirement
         name="org.eclipse.oomph.setup.projects"/>
+    <repository
+        url="http://download.eclipse.org/oomph/updates/milestone/latest"/>
     <requirement
         name="net.sf.eclipsecs.feature.group"/>
+    <repository
+        url="http://eclipse-cs.sourceforge.net/update/"/>
     <requirement
         name="org.eclipse.m2e.feature.feature.group"/>
     <repository
-        url="http://download.eclipse.org/oomph/updates/milestone/latest"/>
-    <repository
-        url="http://eclipse-cs.sourceforge.net/update/"/>
-    <repository
         url="http://download.eclipse.org/releases/mars"/>
-<repository
-        url="http://findbugs.cs.umd.edu/eclipse"/>
+    <requirement
+        name="fr.obeo.releng.targetplatform-feature.feature.group"/>
+    <repository
+        url="http://mbarbero.github.io/fr.obeo.releng.targetplatform/p2/"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone"
-      remoteURI="masters-info-nantes/GitLearning">
+      remoteURI="https://github.com/masters-info-nantes/GitLearning.git">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
@@ -93,6 +97,9 @@
             xsi:type="predicates:NamePredicate"
             pattern="fr.univnantes.alma.resources"/>
         <operand
+            xsi:type="predicates:NamePredicate"
+            pattern="fr.univnantes.alma.server"/>
+        <operand
             xsi:type="predicates:RepositoryPredicate"
             project="GitLearning"/>
       </predicate>
@@ -104,13 +111,10 @@
       id="fr.univnantes.project.import">
     <sourceLocator
         rootFolder="${git.clone.location}/resources/fr.univnantes.alma.resources"/>
-    <description></description>
-  </setupTask>
-  <setupTask
-      xsi:type="projects:ProjectsImportTask"
-      id="fr.univnantes.project.import">
     <sourceLocator
         rootFolder="${git.clone.location}/resources/fr.univnantes.alma.oomph"/>
+    <sourceLocator
+        rootFolder="${git.clone.location}/bundles/fr.univnantes.alma.server"/>
     <description></description>
   </setupTask>
   <stream name="master"
