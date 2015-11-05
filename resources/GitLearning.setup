@@ -66,7 +66,7 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone"
-      remoteURI="masters-info-nantes/GitLearning">
+      remoteURI="https://github.com/masters-info-nantes/GitLearning.git">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
@@ -117,13 +117,6 @@
         rootFolder="${git.clone.location}/bundles/fr.univnantes.alma.server"/>
     <description></description>
   </setupTask>
-  <!--<setupTask
-      xsi:type="projects:ProjectsImportTask"
-      id="fr.univnantes.project.import">
-    <sourceLocator
-        rootFolder="${git.clone.location}/resources/fr.univnantes.alma.oomph"/>
-    <description></description>
-  </setupTask>-->
   <stream name="master"
       label="Master"/>
   <logicalProjectContainer
