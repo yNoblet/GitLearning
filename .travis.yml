@@ -4,13 +4,12 @@ jdk: oraclejdk8
 deploy:
   provider: releases
   api_key: 
-  	secure: AJ5jmFjifxoU4vfA8hpgHlmwKf7vYJZBxcGW1KsbTEiapTnvUOBCF3MHXUzCiAsD3Y2ya1zPBwQqLAhV1dzt1/cAzleeErM2q4fy4iYHVQZyl4HzECF8Y2DJXjw1x0fJNnS1rI2GuJoaF5wuIZKT6buw/j7y7kf2koB9RFz3XtQ7ZikQ7naQaEpc8uH/1e8+sNdcg7AqwaxLt1uNNVxf0Dxnc0vX1f1LT0hT7l/xfep2InleB+NBEX//xshttr/oH3IQK5j/55SDEEnFxETNZ9WA6hckuZ1Y70WAiydt4YJlzQGIfsJ3grgcoUpQLvfY2W+0j8UT9n7XfpIaEVFQV6s0KVwV/zcBTX0PzfXRcwA2o9hCN7qVgWxjNJPbHtt2Yvh6KOKdX4Ob7TKEecIr/zaVQEFIGquzGCaDdMpghqvUD6SUvL8gYcR9VHUEoIkXbGmEOFZNrH7ZuSkq4ZSTcJ5S2ldKJXBLjm6+sO3KJP56t+Z4vNqNjvnVfpfDHCaslx+Qlss1BOQNT0DM+X8NIeVI8zQHby+0hrrqRoaqLoLjHhyQHMHoy3QXm1vt1MfgJFFUuqxbYkaKigZcyloFz5CxNswjpfHOLfOkhZ6/wXbQHU+nbaT8ryA5MuLiwq94D9bxcwTzEf/mYOHWZn7C+ErNsalvLOLcMb6cUX6/3tU=
+   secure: AJ5jmFjifxoU4vfA8hpgHlmwKf7vYJZBxcGW1KsbTEiapTnvUOBCF3MHXUzCiAsD3Y2ya1zPBwQqLAhV1dzt1/cAzleeErM2q4fy4iYHVQZyl4HzECF8Y2DJXjw1x0fJNnS1rI2GuJoaF5wuIZKT6buw/j7y7kf2koB9RFz3XtQ7ZikQ7naQaEpc8uH/1e8+sNdcg7AqwaxLt1uNNVxf0Dxnc0vX1f1LT0hT7l/xfep2InleB+NBEX//xshttr/oH3IQK5j/55SDEEnFxETNZ9WA6hckuZ1Y70WAiydt4YJlzQGIfsJ3grgcoUpQLvfY2W+0j8UT9n7XfpIaEVFQV6s0KVwV/zcBTX0PzfXRcwA2o9hCN7qVgWxjNJPbHtt2Yvh6KOKdX4Ob7TKEecIr/zaVQEFIGquzGCaDdMpghqvUD6SUvL8gYcR9VHUEoIkXbGmEOFZNrH7ZuSkq4ZSTcJ5S2ldKJXBLjm6+sO3KJP56t+Z4vNqNjvnVfpfDHCaslx+Qlss1BOQNT0DM+X8NIeVI8zQHby+0hrrqRoaqLoLjHhyQHMHoy3QXm1vt1MfgJFFUuqxbYkaKigZcyloFz5CxNswjpfHOLfOkhZ6/wXbQHU+nbaT8ryA5MuLiwq94D9bxcwTzEf/mYOHWZn7C+ErNsalvLOLcMb6cUX6/3tU=
   file:
-   - /home/travis/build/nBourdin/GitLearning/resources/fr.univnantes.alma.repository/target/products/ALMAServer-win32.win32.x86_64.zip
-   - /home/travis/build/nBourdin/GitLearning/resources/fr.univnantes.alma.repository/target/products/ALMAServer-linux.gtk.x86_64.zip
-   - /home/travis/build/nBourdin/GitLearning/resources/fr.univnantes.alma.repository/target/products/ALMAServer-macosx.cocoa.x86_64.zip
+   - $TRAVIS_BUILD_DIR/resources/fr.univnantes.alma.repository/target/products/ALMAServer-win32.win32.x86_64.zip
+   - $TRAVIS_BUILD_DIR/resources/fr.univnantes.alma.repository/target/products/ALMAServer-linux.gtk.x86_64.zip
+   - $TRAVIS_BUILD_DIR/resources/fr.univnantes.alma.repository/target/products/ALMAServer-macosx.cocoa.x86_64.zip
   skip_cleanup: true
   on:
-    tags: true
-  	repo: nBourdin/GitLearning
-  	all_branches: true
+   tags: true
+   repo: nBourdin/GitLearning
