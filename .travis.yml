@@ -1,0 +1,12 @@
+language: java
+script: mvn clean verify -f resources/fr.univnantes.alma.releng/pom.xml
+jdk: oraclejdk8
+deploy:
+  provider: releases
+  api_key:
+    secure: Z+vm0HOo3jc3t48KYgfS4h+VsFMBNbhB19JhFduFgBKrspNejLKYDru6lfy5RjNrrzNkVaRQaJ0TfLdxdQgvA3KtNdPMcUoCrFDBMfAIClfsIF1YOWX0wNdtmzcXCf+EhC6h3KFgkYJXmuRZb7sVviOHWXtrDHf2dOs9T7UP/DVzMynKNLynLzADdjRsTi041K5Yk1qmCOfAMauRj9yIHYDqkCeCg56+guQq7C87semEX+ElYR24tFujmJUipiVjUxs0j/0XCh4wVdS7MU0BM0laXzvIhaNXnhIeMN6aAHoJEW3AuPPSFViykAOmLV0mg51uX0cXg6oZQuKxZs52Wo5Pd4QtDGhK3NRNQF8s6X1KNlTW/7qW81V5hAcl1bQTi7lCQsZub8k9w0m2VS1CSnr+T66r01n21xkFtwzVuoAtv8gMDQ5BPD1rAnJkqgHBBQ5JaOLmRycFSNqfmOGKp66pbgGp9HZ93ZPxsgC37ZkaaPD/7pjNVEHUA9dtgjO233sURNXDARXKvy8Di0VJQ3z00w86+kCXDmxRCEFyh9M5uRrZmkTioIwYThlyn9E274J8pg9A7WJHeBwIb6z4AyefdGuRe8syDAmJiUyD0BHQqZy7q0flvOyzyHU7CB8WB/2QHv21oGflxdEO3tdeH/Q+tp5Q8n4wXSqOZjSRCA0=
+  file_glob: true
+  file: resources/fr.univnantes.alma.repository/target/products/ALMAServer-*.zip
+  on:
+    tags: true
+    repo: masters-info-nantes/GitLearning
