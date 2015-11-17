@@ -4,14 +4,9 @@ jdk: oraclejdk8
 deploy:
   provider: releases
   api_key:
-   secure: jVJqCELsr7VJN+zvDf+DOxy2mmMPMBF5zisePJkrjP1kJfsOIQRuDvybkoULFuyKT/vou807ENHfWjjY0ZsIYhBb4/BEa2nuSFp/6KxfL0K674UslZBpPD4zt373udeuKfwFkruWk/DgFSngcVzifXKHFmN0aM/deR9N8/tXBrSht60VMJFqUzAqcQTchsQXaIgUCBJmxrcdy2gWMP7Wrc57GGyrBm6ICikklNDo+OPVuSML29WjzInUaMdd0GxDjWiZbl7qeiCIHo+syd+plqBh0YkZuezHXqmz6c4LrOOrpQrx+sWojcIYNl+rfMpliJvoHwHW+RNX4yOK7RAU3A3jLQESfM//qC4ySmr/FxFx6WhVTaBIaRGX+58rT8OMWBTl/TQfJgA15fLRp9kQqaif68VRNSsDEK7cmB5ktm9GFOpzpWhLjo29Y6OJRyo6dkBTM/i1UQBpaoesIwkNzKK/Qmm9AtnUpXsnZsY+WBRuI5ypCij/RPWNrJ3eEQZIZuQ096bGbeFDyHyGhMdacBkz0JfAA+PVNHv8iTQuOXuOH/hJnxmMbseLKysRruAPk8Cd6IVUiYmHgEJDxysyVp44wlhxK9mdXhMdguCkteIMwBOsqvD6vMd5vBRDXsHE38C6/dieLNRELPjaXFJO7AUmKVJLmkVMLjKmxODGf7I=
-  file:
-  - "$TRAVIS_BUILD_DIR/resources/fr.univnantes.alma.repository/target/products/ALMAServer-win32.win32.x86_64.zip"
-  - "$TRAVIS_BUILD_DIR/resources/fr.univnantes.alma.repository/target/products/ALMAServer-linux.gtk.x86_64.zip"
-  - "$TRAVIS_BUILD_DIR/resources/fr.univnantes.alma.repository/target/products/ALMAServer-macosx.cocoa.x86_64.zip"
-  skip_cleanup: true
+    secure: Z+vm0HOo3jc3t48KYgfS4h+VsFMBNbhB19JhFduFgBKrspNejLKYDru6lfy5RjNrrzNkVaRQaJ0TfLdxdQgvA3KtNdPMcUoCrFDBMfAIClfsIF1YOWX0wNdtmzcXCf+EhC6h3KFgkYJXmuRZb7sVviOHWXtrDHf2dOs9T7UP/DVzMynKNLynLzADdjRsTi041K5Yk1qmCOfAMauRj9yIHYDqkCeCg56+guQq7C87semEX+ElYR24tFujmJUipiVjUxs0j/0XCh4wVdS7MU0BM0laXzvIhaNXnhIeMN6aAHoJEW3AuPPSFViykAOmLV0mg51uX0cXg6oZQuKxZs52Wo5Pd4QtDGhK3NRNQF8s6X1KNlTW/7qW81V5hAcl1bQTi7lCQsZub8k9w0m2VS1CSnr+T66r01n21xkFtwzVuoAtv8gMDQ5BPD1rAnJkqgHBBQ5JaOLmRycFSNqfmOGKp66pbgGp9HZ93ZPxsgC37ZkaaPD/7pjNVEHUA9dtgjO233sURNXDARXKvy8Di0VJQ3z00w86+kCXDmxRCEFyh9M5uRrZmkTioIwYThlyn9E274J8pg9A7WJHeBwIb6z4AyefdGuRe8syDAmJiUyD0BHQqZy7q0flvOyzyHU7CB8WB/2QHv21oGflxdEO3tdeH/Q+tp5Q8n4wXSqOZjSRCA0=
+  file_glob: true
+  file: resources/fr.univnantes.alma.repository/target/products/ALMAServer-*.zip
   on:
     tags: true
-    repo: nBourdin/GitLearning
-  password:
-    
+    repo: masters-info-nantes/GitLearning
